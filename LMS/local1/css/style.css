@@ -1,0 +1,146 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap");
+body,
+button {
+  font-family: "Inter", sans-serif;
+}
+:root {
+  --offcanvas-width: 270px;
+  --topNavbarHeight: 56px;
+}
+.sidebar-nav {
+  width: var(--offcanvas-width);
+}
+.sidebar-link {
+  display: flex;
+  align-items: center;
+}
+.sidebar-link .right-icon {
+  display: inline-flex;
+}
+.sidebar-link[aria-expanded="true"] .right-icon {
+  transform: rotate(180deg);
+}
+
+
+
+@media (min-width: 992px) {
+  body {
+    overflow: auto !important;
+  }
+  main {
+    margin-left: var(--offcanvas-width);
+  }
+  /* table{
+    border-collapse: collapse;
+                  width:90%;
+                  
+                  
+                  box-shadow: 2px 2px 12px rgba(.2, 0, 0, 0.2), -1px -1px 8px rgba(0, 0, 0, 0.2);
+  } */
+  /* tr{
+    transition: all .2s ease-in;
+    cursor: pointer;
+  } */
+
+  /* th,td{
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+  } */
+  /* #header{
+    background-color: aliceblue;
+    color: black;
+
+  } */
+  /* tr:hover{
+    background-color: #f5f5f5;
+    transform: scale(1.02);
+    box-shadow: 2px 2px 12px rgba(.2, 0, 0, 0.2), -1px -1px 8px rgba(0, 0, 0, 0.2);
+  } */
+  
+  /* this is to remove the backdrop */
+  .offcanvas-backdrop::before {
+    display: none;
+  }
+  .sidebar-nav {
+    -webkit-transform: none;
+    transform: none;
+    visibility: visible !important;
+    height: calc(100% - var(--topNavbarHeight));
+    top: var(--topNavbarHeight);
+  }
+
+  
+}
+
+
+/* .hero-section-full-height {
+  height: 680px;
+  min-height: 680px;
+  position: relative;
+}
+
+.carousel:hover .carousel-control-next-icon, 
+.carousel:hover .carousel-control-prev-icon {
+  opacity: 1;
+}
+
+#hero-slide .carousel-item {
+  height: 680px;
+  min-height: 680px;
+}
+
+#hero-slide .carousel-caption {
+  background: var(--white-color);
+  clip-path: polygon(100% 100%, 100% 150px, 0 100%);
+  color: var(--secondary-color);
+  top: 1px;
+  bottom: -1px;
+  right: 0;
+  left: auto;
+  text-align: right;
+  min-width: 680px;
+  min-height: 680px;
+  padding: 100px 100px 50px 100px;
+}
+
+.carousel-image {
+  display: block;
+  width: 100%;
+  min-height: 680px;
+}
+
+#hero-slide .carousel-indicators-wrap {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  left: 0;
+}
+
+#hero-slide .carousel-indicators {
+  margin-right: 0;
+  margin-left: 22px;
+  justify-content: inherit;
+}
+
+.carousel-control-next, 
+.carousel-control-prev {
+  opacity: 1;
+}
+
+.carousel-control-next-icon, 
+.carousel-control-prev-icon {
+  background-color: var(--secondary-color);
+  border-radius: var(--border-radius-large);
+  background-size: 60% 60%;
+  width: 80px;
+  height: 80px;
+  opacity: 0;
+  transition: all 0.5s;
+}
+
+.carousel-control-next-icon:hover, 
+.carousel-control-prev-icon:hover {
+  background-color: var(--primary-color);
+} */
+
